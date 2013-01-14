@@ -1,0 +1,8 @@
+{
+  "name": "Socialite",
+  "version": "2.0.0",
+  "main": "./socialite.js",
+  "dependencies": {
+
+  }
+}
