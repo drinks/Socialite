@@ -16,7 +16,7 @@
 
     Socialite.widget('twitter', 'simple',   { init: function(instance){
         var el = document.createElement('a'),
-            href = "//twitter.com/intent/tweet";
+            href = "//twitter.com/intent/tweet?";
         el.className = instance.widget.name;
         Socialite.copyDataAttributes(instance.el, el);
         href += Socialite.getDataAttributes(el, true);
