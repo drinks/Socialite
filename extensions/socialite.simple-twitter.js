@@ -15,10 +15,12 @@
     };
 
     Socialite.widget('twitter', 'simple',   { init: function(instance){
-        var el = document.createElement('a');
+        var el = document.createElement('a'),
+            href = "//twitter.com/intent/tweet";
         el.className = instance.widget.name;
         Socialite.copyDataAttributes(instance.el, el);
-        el.setAttribute('href', '//twitter.com/intent/tweet');
+        href += Socialite.getDataAttributes(el, true);
+        el.setAttribute('href', href);
         el.setAttribute('data-lang', instance.el.getAttribute('data-lang') || Socialite.settings.twitter.lang);
         if (instance.el.getAttribute('data-image')) {
             imgTag = document.createElement('img');
