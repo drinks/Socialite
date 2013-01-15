@@ -17,8 +17,8 @@
     Socialite.widget('twitter', 'simple',   { init: function(instance){
         var el = document.createElement('a');
         el.className = instance.widget.name;
-        Socialite.copyDataAttributes(instance.el, el);
-        el.setAttributes('href', '//twitter.com/intent/tweet');
+        Socialite.copyDataAttribute(instance.el, el);
+        el.setAttribute('href', '//twitter.com/intent/tweet');
         el.setAttribute('data-lang', instance.el.getAttribute('data-lang') || Socialite.settings.twitter.lang);
         if (instance.el.getAttribute('data-image')) {
             imgTag = document.createElement('img');
